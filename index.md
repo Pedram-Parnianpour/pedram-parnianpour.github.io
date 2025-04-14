@@ -3,7 +3,8 @@ layout: default
 title: Home
 ---
 
-**Hi!**
+<span style="color: blue;">**Hi!**</span>
+
 
 I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning** and **computational modelling** in **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
 
