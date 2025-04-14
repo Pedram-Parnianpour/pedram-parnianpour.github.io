@@ -1,14 +1,7 @@
 ---
 layout: default
+title: Home
 ---
-
-<div style="text-align: center; margin-bottom: 30px;">
-  <a href="/" style="margin: 0 15px;">Home</a>
-  <a href="/about" style="margin: 0 15px;">Life & Leisure</a>
-  <a href="/publications" style="margin: 0 15px;">Publications</a>
-  <a href="/cv" style="margin: 0 15px;">CV</a>
-</div>
-
 
 **Hi!**
 
