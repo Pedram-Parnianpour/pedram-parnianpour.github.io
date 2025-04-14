@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<div style="text-align: center; margin-bottom: 30px;">
+  <a href="/" style="margin: 0 15px;">Home</a>
+  <a href="/about" style="margin: 0 15px;">About</a>
+  <a href="/publications" style="margin: 0 15px;">Publications</a>
+  <a href="/cv" style="margin: 0 15px;">CV</a>
+</div>
+
+
 **Hi!**
 
 I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning** and **computational modelling** in **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
