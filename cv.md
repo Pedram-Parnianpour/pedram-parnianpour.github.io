@@ -1,9 +1,9 @@
 ---
 layout: default
-title: CV
+title: Curriculum vitae
 ---
 
-# Curriculum Vitae
+# Curriculum vitae
 
 👉 [Download CV (PDF)](Pedram_Parnianpour_CV_2025.pdf)
 
