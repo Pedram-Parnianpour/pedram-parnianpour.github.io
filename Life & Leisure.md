@@ -31,8 +31,8 @@ Here are some of the hikes I've completed. I love being out in nature — it's a
 
 📸 **Some views from the trail:**
 
-<img src="assets/hike1.jpg" alt="Image 1" width="45%" style="margin-right: 10px;" />
-<img src="assets/hike2.jpg" alt="Image 2" width="45%" />
+<img src="assets/Image1.jpg" alt="Image 1" width="45%" style="margin-right: 10px;" />
+<img src="assets/Image2.jpg" alt="Image 2" width="45%" />
 
 
 
