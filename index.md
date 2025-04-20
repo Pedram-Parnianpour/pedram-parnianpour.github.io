@@ -20,14 +20,14 @@ I hold a **PhD in Neuroscience** from the University of Alberta, where I worked 
 
 ## <span style="color: blue;">Academic Highlights</span>
 
-- Delivered presentations at the **International Symposium on ALS/MND**, Organization for Human Brain Mapping, and Neuroimaging Society in ALS
-- Co-authored publications in Brain Communications, Scientific Reports, Journal of Neurology, and more
-- Collaborated with global academic leaders and industry partners like **Biogen Inc.**
+- Delivered presentations at the **International Symposium on ALS/MND**, the Organization for Human Brain Mapping, and the Neuroimaging Society in ALS
+- Co-authored publications in *Brain Communications*, *Scientific Reports*, *Journal of Neurology*, and more
+- Collaborated with global academic leaders and industry partners such as **Biogen Inc.**
 
 
 ## <span style="color: blue;">Teaching & Mentorship</span>
 
-I’ve taught and supported students in courses including Biomedical Instrumentation, Applied Linear Algebra, and Physics for Engineers, and supervised undergraduate research projects on brain imaging in ALS.
+I’ve taught and supported students in courses such as Biomedical Instrumentation, Applied Linear Algebra, and Physics for Engineers, and supervised undergraduate research projects on brain imaging in ALS.
 
 
 ## <span style="color: blue;">📬 Get in Touch</span>
