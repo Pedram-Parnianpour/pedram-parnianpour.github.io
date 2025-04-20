@@ -5,7 +5,7 @@ title: Life & Leisure
 
 # 🌿 Life & Leisure
 
-Welcome to a glimpse of what I enjoy beyond research — exploring nature, watching inspiring films, and diving into memorable books.
+Welcome to a glimpse of what I enjoy beyond research — exploring nature, watching inspiring movies, and diving into memorable books.
 
 ---
 
