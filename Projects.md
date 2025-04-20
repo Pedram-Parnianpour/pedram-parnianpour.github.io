@@ -1,6 +1,6 @@
-### 📘 Projects & Publications
+# 📘 Projects & Publications
 
-Here are some of the key projects and publications I've worked on, with brief explanations and links to the full articles.
+Here are some key projects and publications I've worked on, with brief explanations and links to the full articles.
 
 ---
 
