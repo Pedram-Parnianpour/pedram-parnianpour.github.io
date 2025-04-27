@@ -1,4 +1,4 @@
-# 📘 Projects & Publications
+# 📘 Publications
 
 Here are some key projects and publications I've worked on, with brief explanations and links to the full articles.
 
