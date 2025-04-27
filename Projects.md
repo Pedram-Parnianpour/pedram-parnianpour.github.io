@@ -40,20 +40,21 @@ This study explores the challenges of domain shift in deep learning applications
 # Conference Abstracts
 
 ### Podium Presentations
-- The 13th Neuroimaging Society in ALS (NiSALS) Meeting, Montreal, Canada, Dec 2024
-- The 25th Annual Neuroscience Research Day, University of Alberta, March 2024
-- The 34th International Symposium on ALS/MND, Basel, Switzerland, Dec 2023
-- The 24th Annual Neuroscience Research Day, University of Alberta, March 2023
-- ALS Canada Research Forum Meeting — Bonus Session, online, June 2021
-- Alberta Imaging Symposium (AIS), University of Calgary, May 2019
+- **The 13th Neuroimaging Society in ALS (NiSALS) Meeting**, Montreal, Canada, Dec 2024
+- **The 25th Annual Neuroscience Research Day**, University of Alberta, March 2024
+- **The 34th International Symposium on ALS/MND**, Basel, Switzerland, Dec 2023
+- **The 24th Annual Neuroscience Research Day**, University of Alberta, March 2023
+- **ALS Canada Research Forum Meeting — Bonus Session**, online, June 2021
+- **Alberta Imaging Symposium (AIS)**, University of Calgary, May 2019
 
 ### Poster Presentations
-- ALS Canada Research Forum Meeting, June 2023
-- 27th Annual Meeting of the Organization for Human Brain Mapping (OHBM), 2021
-- ALS Canada Research Forum Meeting, June 2021
-- 25th Annual Meeting of the Organization for Human Brain Mapping (OHBM), June 2019
-- ALS Canada Research Forum Meeting, April 2019
-- Alberta Imaging Symposium (AIS), May 2019
-- 7th International Conference on Cognitive Science (ICCS), 2017 (two presentations)
+- **ALS Canada Research Forum Meeting**, June 2023
+- **The 27th Annual Meeting of the Organization for Human Brain Mapping (OHBM)**, 2021
+- **ALS Canada Research Forum Meeting**, June 2021
+- **The 25th Annual Meeting of the Organization for Human Brain Mapping (OHBM)**, June 2019
+- **ALS Canada Research Forum Meeting**, April 2019
+- **Alberta Imaging Symposium (AIS)**, May 2019
+- **The 7th International Conference on Cognitive Science (ICCS)**, 2017 (two presentations)
+
 
 ---
