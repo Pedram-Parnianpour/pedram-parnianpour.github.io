@@ -16,7 +16,7 @@ Here are some of the hikes I've completed. I love being out in nature — it's a
 | Hike Name           | Location                                                                    |
 |---------------------|-----------------------------------------------------------------------------|
 | Deep Cove           | https://maps.app.goo.gl/3yAcZspFCDFy8Ymc9?g_st=com.google.maps.preview.copy |
-| Seymour Grind and Good Sir Martin Trail    | https://www.alltrails.com/trail/canada/british-columbia/seymour-grind-b-p-good-sir-martin-and-bridle-loop?sh=lplzyr)    |
+| Seymour Grind and Good Sir Martin Trail    | https://www.alltrails.com/trail/canada/british-columbia/seymour-grind-b-p-good-sir-martin-and-bridle-loop?sh=lplzyr    |
 | Norvan Falls  | https://www.alltrails.com/trail/canada/british-columbia/norvan-falls?sh=lplzyr    |
 | Boden Powell Trail  | https://www.alltrails.com/trail/canada/british-columbia/baden-powell-trail-fromme-mountain-section?sh=lplzyr |
 | Dog Mountain Trail  | https://www.alltrails.com/trail/canada/british-columbia/dog-mountain-and-first-lake-loop?sh=lplzyr |
