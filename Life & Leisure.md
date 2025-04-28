@@ -27,6 +27,7 @@ Here are some of the hikes I've completed. I love being out in nature — it's a
 | Belcarra Bluffs and Admiralty Point Trail | https://www.alltrails.com/trail/canada/british-columbia/belcarra-bluffs-and-admiralty-point-trail |
 | Ridge Park Loop     | https://www.alltrails.com/trail/canada/british-columbia/ridge-park-loop-trail |
 | Capilano Canyon     | https://www.vancouvertrails.com/trails/capilano-canyon/                     |
+| Boundary and Old Buck Trail Loop  | https://maps.app.goo.gl/PK5EQ55c8yYnyv5V9?g_st=com.google.maps.preview.copy |
 
 
 📸 **Some views from the trail:**
