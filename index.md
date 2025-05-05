@@ -2,19 +2,15 @@
 layout: default
 title: Home
 ---
-<div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
 
-  <div style="flex: 0 0 auto;">
-    <img src="/assets/pedram.jpg" alt="Pedram Parnianpour" style="max-width: 600px; border-radius: 100px;">
-  </div>
+<img src="/assets/pedram.jpg" alt="Pedram Parnianpour" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
 
-  <div style="flex: 1;">
   
 ## Hi!
 
-  I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning** and **computational modelling** in **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
+I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning** and **computational modelling** in **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
 
-  I hold a **PhD in Neuroscience** from the University of Alberta, where I worked with Professor Sanjay Kalra on the application of **MRI-based techniques** and **texture analysis** to explore **cerebral degeneration and disease heterogeneity in ALS**.
+I hold a **PhD in Neuroscience** from the University of Alberta, where I worked with Professor Sanjay Kalra on the application of **MRI-based techniques** and **texture analysis** to explore **cerebral degeneration and disease heterogeneity in ALS**.
 
 
 ## <span style="color: black;">Research Interests</span>
