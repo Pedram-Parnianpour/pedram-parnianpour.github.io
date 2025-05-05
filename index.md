@@ -5,12 +5,12 @@ title: Home
 <div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
 
   <div style="flex: 0 0 auto;">
-    <img src="/assets/pedram.jpg" alt="Pedram Parnianpour" style="max-width: 200px; border-radius: 10px;">
+    <img src="/assets/pedram.jpg" alt="Pedram Parnianpour" style="max-width: 600px; border-radius: 100px;">
   </div>
 
   <div style="flex: 1;">
   
-  ## Hi!
+## Hi!
 
   I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning** and **computational modelling** in **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
 
