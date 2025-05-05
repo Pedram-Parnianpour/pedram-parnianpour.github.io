@@ -16,8 +16,6 @@ title: Home
 
   I hold a **PhD in Neuroscience** from the University of Alberta, where I worked with Professor Sanjay Kalra on the application of **MRI-based techniques** and **texture analysis** to explore **cerebral degeneration and disease heterogeneity in ALS**.
 
-  </div>
-</div>
 
 ## <span style="color: black;">Research Interests</span>
 
