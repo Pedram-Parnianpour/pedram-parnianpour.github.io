@@ -19,7 +19,7 @@ title: Home
   </div>
 </div>
 
-## <span style="color: blue;">Research Interests</span>
+## <span style="color: black;">Research Interests</span>
 
 - Neuroimaging (structural & functional MRI)
 - ALS disease progression, stratification, and subtyping
@@ -27,19 +27,19 @@ title: Home
 - Biomarker development and predictive modelling
 
 
-## <span style="color: blue;">Academic Highlights</span>
+## <span style="color: black;">Academic Highlights</span>
 
 - Delivered presentations at the **International Symposium on ALS/MND**, the Organization for Human Brain Mapping, and the Neuroimaging Society in ALS
 - Co-authored publications in *Brain Communications*, *Scientific Reports*, *Journal of Neurology*, and more
 - Collaborated with global academic leaders and industry partners such as **Biogen Inc.**
 
 
-## <span style="color: blue;">Teaching & Mentorship</span>
+## <span style="color: black;">Teaching & Mentorship</span>
 
 I’ve taught and supported students in courses such as Biomedical Instrumentation, Applied Linear Algebra, and Physics for Engineers, and supervised undergraduate research projects on brain imaging in ALS.
 
 
-## <span style="color: blue;">📬 Get in Touch</span>
+## <span style="color: black;">📬 Get in Touch</span>
 
 - **Email**: [pedram.parnianpour@ubc.ca](mailto:pedram.parnianpour@ubc.ca)  
 - **LinkedIn**: [linkedin.com/in/pedramparnianpour](https://www.linkedin.com/in/pedramparnianpour)  
