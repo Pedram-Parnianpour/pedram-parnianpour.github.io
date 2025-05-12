@@ -12,11 +12,13 @@ Thank you to ALS Canada for supporting.
 
 ---
 
-# This summer, Donna Bartel and Mike Pearson are taking on a massive challenge: 17 triathlons across Canada in just four months to try and raise $600,000 to end ALS. 
+# Tri’ing to End ALS
+
+This summer, Donna Bartel and Mike Pearson are taking on a massive challenge: 17 triathlons across Canada in just four months to try and raise $600,000 to end ALS. 
 
 Half of the funds will support local ALS societies, while the other half will go towards PROJECT HOPE at UBC, where Dr. Erik P Pioro leads groundbreaking research and care for patients with ALS and related disorders.
 
-*Learn more and support Donna and Mike's journey: [here](https://lnkd.in/gx4KUd-n).*
+*Learn more and support Donna and Mike's journey: [here](https://www.centreforbrainhealth.ca/news/triing-to-end-als-one-race-at-a-time/).*
 
-Photo by Paul H. Joseph
-![UBC ALS and Related Disorders Clinical and Resaerch Team](assets/dmcbh.jpg)
+Photo of the UBC ALS and Related Disorders Clinical and Research Team by Paul H. Joseph
+![UBC ALS and Related Disorders Team](assets/dmcbh.jpg)
