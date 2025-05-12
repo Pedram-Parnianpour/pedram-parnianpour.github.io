@@ -21,4 +21,6 @@ Half of the funds will support local ALS societies, while the other half will go
 *Learn more and support Donna and Mike's journey: [here](https://www.centreforbrainhealth.ca/news/triing-to-end-als-one-race-at-a-time/).*
 
 Photo of the UBC ALS and Related Disorders Clinical and Research Team by Paul H. Joseph
-![UBC ALS and Related Disorders Team](assets/dmcbh.jpg)
+<p align="center">
+  <img src="assets/dmcbh.jpg" alt="UBC ALS and Related Disorders Team" style="width:100%; max-width:800px;">
+</p>
