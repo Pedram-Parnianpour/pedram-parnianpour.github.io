@@ -1,6 +1,7 @@
 # News
 
 # Research Highlighted by ALS Canada
+**Posted on: April 28, 2025**
 
 Our research was featured in the [April 2025 Research Update](https://als.ca/news/research-update-april-2025/) by ALS Canada.
 
@@ -13,6 +14,7 @@ Thank you to ALS Canada for supporting.
 ---
 
 # Tri’ing to End ALS
+**Posted on: May 11, 2025**
 
 This summer, Donna Bartel and Mike Pearson are taking on a massive challenge: 17 triathlons across Canada in just four months to try and raise $600,000 to end ALS. 
 
