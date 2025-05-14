@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<img src="/assets/pedram.jpg" alt="Pedram Parnianpour" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+<img src="/assets/IMG_5932.jpeg" alt="Pedram Parnianpour" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
 
 ## Hi!
 
