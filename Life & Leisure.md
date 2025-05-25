@@ -52,6 +52,7 @@ A few movies that I’ve really enjoyed — whether for their storytelling, cine
 | Past Lives (2023)        | 7.8/10                   | Romance/Drama        |
 | A Man Called Otto (2022) | 7.5/10                   | Drama/Melodrama      |
 | About Elly (2009)        | 7.9/10                   | Mystery/Thriller     |
+| Nonnas (2025)            | 6.9/10                   | Comedy               |
 
 ---
 
