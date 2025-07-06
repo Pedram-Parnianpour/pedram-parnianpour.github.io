@@ -67,5 +67,7 @@ Here are some of the books that have shaped my thinking or simply brought me joy
 | The Alchemist            | Paulo Coelho             |
 | Nineteen Eighty-Four     | George Orwell            |
 | Clear Thinking           | Shane Parrish            |
+| The Story of Philosophy  | Bryan Magee              |
+| A Brief History of Intelligence | Max Bennett       |
 
 ---
