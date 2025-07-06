@@ -1,6 +1,6 @@
 # Perspectives
 
-# functional MRI to evaluate synaptic activity
+# Philosophy
 **Posted on: May 16, 2025**
-
+In progress
 
