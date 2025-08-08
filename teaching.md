@@ -7,6 +7,16 @@ title: Teaching
 
 ---
 
+## 🎓 University of British Columbia  
+**Faculty of Medicine**  
+**Department of Cellular & Physiological Sciences**
+
+**Neuroanatomy - Vancouver Summer Programe**  
+*Lecturer — Summer 2025*  
+Undergraduate Level  
+
+---
+
 ## 🎓 Simon Fraser University  
 **Faculty of Applied Sciences**  
 **School of Engineering Science**
