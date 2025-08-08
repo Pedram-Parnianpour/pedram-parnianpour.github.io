@@ -28,7 +28,7 @@ I hold a **PhD in Neuroscience** from the University of Alberta, where I worked 
 
 ## Teaching & Mentorship
 
-I’ve taught and supported students in courses such as Biomedical Instrumentation, Applied Linear Algebra, and Physics for Engineers, and supervised undergraduate research projects on brain imaging in ALS.
+I’ve taught and supported students in courses such as Biomedical Instrumentation, Neuroanatomy, Applied Linear Algebra, and Physics for Engineers, and supervised undergraduate research projects on brain imaging in ALS.
 
 ## 📬 Get in Touch
 
