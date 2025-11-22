@@ -17,7 +17,7 @@ In summary, this thesis has revealed important insights into the progression of 
 ---
 # Journal Articles
 
-#### **1. [Progressive and short-interval changes observed in the corticospinal tract and corpus callosum of ALS patients: A texture analysis study](https://doi.org/10.3174/ajnr.A9013)
+#### **1. [Progressive and short-interval changes observed in the corticospinal tract and corpus callosum of ALS patients: A texture analysis study](https://doi.org/10.3174/ajnr.A9013)**
 *American Journal of Neuroradiology, 2025*
 
 **Summary:** 
