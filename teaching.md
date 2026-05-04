@@ -3,59 +3,46 @@ layout: default
 title: Teaching
 ---
 
-# 📖 Teaching
+# Teaching
+
+## University of British Columbia
+
+**Neuroanatomy — Vancouver Summer School** *(Guest Lecturer)*
+July–August 2025 · Undergraduate · 24 students
+
+## Simon Fraser University
+
+**ENSC 475/875 — Biomedical Instrumentation** *(Sessional Instructor)*
+January–April 2025 · Undergraduate & Graduate · 17 students
+
+## University of Alberta
+
+**Math 102 & Physics 130** *(Teaching Assistant)*
+January 2021–April 2024 · Undergraduate
+
+## Amirkabir University of Technology
+
+**Logic Circuits Lab, Control Systems Lab, and Microprocessors Lab** *(Instructor)*
+February 2015–August 2017 · Undergraduate · 15 students
+
+**Pattern Recognition and Machine Learning** *(Teaching Assistant)*
+February 2016–August 2016 · Graduate
+
+**Biological Systems Modelling** *(Volunteer Teaching Assistant)*
+February 2016–August 2016 · Graduate (international students, taught in English)
+
+## Tafresh University
+
+**Linear Systems Control** *(Volunteer Teaching Assistant)*
+February 2014–August 2014 · Undergraduate
 
 ---
 
-## 🎓 University of British Columbia  
-**Faculty of Medicine**  
-**Department of Cellular & Physiological Sciences**
+# Mentorship
 
-**Neuroanatomy - Vancouver Summer Programe**  
-*Lecturer — Summer 2025*  
-Undergraduate Level  
+I advised and mentored undergraduate summer students and one neurology resident (2020–2024) in Dr. Sanjay Kalra's lab, providing guidance on MRI fundamentals, data processing, statistical analysis, application of machine learning, and presentation of results.
 
----
-
-## 🎓 Simon Fraser University  
-**Faculty of Applied Sciences**  
-**School of Engineering Science**
-
-**ENSC 475 / 875 — Biomedical Instrumentation**  
-*Instructor — Spring 2025*  
-Undergraduate & Graduate Levels  
-
----
-
-## 🎓 University of Alberta  
-**Engineering Students Success Centre**  
-**Faculty of Engineering**
-
-**MATH 102 — Applied Linear Algebra**  
-*Teaching Assistant — 2021–2024*  
-
-**PHYS 130 — Wave Motion, Optics, and Sound**  
-*Teaching Assistant — 2022–2023*  
-Undergraduate Level  
-
----
-
-## 🎓 Amirkabir University of Technology  
-**Department of Biomedical Engineering**
-
-**Pattern Recognition and Machine Learning**  
-*Teaching Assistant — 2016*
-
-**Biological Systems Modelling**  
-*Teaching Assistant — 2016*
-
-**Linear Control Systems Lab**  
-*Instructor — 2016–2017*
-
-**Digital Circuits Lab**  
-*Instructor — 2015–2017*
-
-**Microprocessors Lab**  
-*Instructor — 2016*
-
----
+* **2023** – Socrates Temraz; *Project: Cerebral degeneration in ALS using T2-weighted MRI*
+* **2022** – Adam Elamy; *Project: Functional connectivity of basal ganglia in ALS*
+* **2021** – Ekhlas Assaedi (Neurology resident); *Project: Multimodal MRI texture analysis in ALS*
+* **2020** – Andrew Wu (now a Neurology resident); *Project: Longitudinal FLAIR MRI texture analysis in ALS*
