@@ -7,7 +7,7 @@ title: Home
 
 ## Hi!
 
-I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning**, **resting-state fMRI**, and **computational modelling** in MRI/PET studies of **Amyotrophic Lateral Sclerosis (ALS) and related disorders**. I am also collaborating with **Trace Neuroscience** on neuroimaging biomarker development for a Phase 1/2 clinical trial of TRCN-1023, an ASO therapy targeting the UNC13A protein in ALS.
+I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning**, **neuroimaging**, and **computational modelling** in studies of **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
 
 I hold a **PhD in Neuroscience** from the University of Alberta, where I worked with Professor Sanjay Kalra on the application of **MRI-based techniques** and **texture analysis** to explore **cerebral degeneration and disease heterogeneity in ALS**.
 
@@ -23,7 +23,7 @@ I hold a **PhD in Neuroscience** from the University of Alberta, where I worked 
 
 ## Academic Highlights
 
-* **President**, UBC Postdoctoral Association (2025–)
+* **President**, UBC Postdoctoral Association (2025–2026)
 * Delivered presentations at the **International Symposium on ALS/MND**, NEALS, iCNS (invited), ALS EnCouRAge Canada, OHBM, and the Neuroimaging Society in ALS
 * Reviewer for *Scientific Reports*, *Neuroradiology*, *NeuroImage: Clinical*, and *Brain Research Bulletin*; reviewed 24 abstracts for ISMRM 2026
 * Co-authored publications in *American Journal of Neuroradiology*, *Annals of Neurology*, *Brain Communications*, *Scientific Reports*, *Journal of Neurology*, and more
