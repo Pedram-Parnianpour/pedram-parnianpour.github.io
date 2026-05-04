@@ -7,7 +7,7 @@ title: Home
 
 ## Hi!
 
-I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning** and **computational modelling** in MRI/PET studies of **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
+I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning**, **resting-state fMRI**, and **computational modelling** in MRI/PET studies of **Amyotrophic Lateral Sclerosis (ALS) and related disorders**. I am also collaborating with **Trace Neuroscience** on neuroimaging biomarker development for a Phase 1/2 clinical trial of TRCN-1023, an ASO therapy targeting the UNC13A protein in ALS.
 
 I hold a **PhD in Neuroscience** from the University of Alberta, where I worked with Professor Sanjay Kalra on the application of **MRI-based techniques** and **texture analysis** to explore **cerebral degeneration and disease heterogeneity in ALS**.
 
@@ -15,24 +15,28 @@ I hold a **PhD in Neuroscience** from the University of Alberta, where I worked 
 
 ## Research Interests
 
-- Neuroimaging (structural & functional MRI)  
-- ALS disease progression, stratification, and subtyping  
-- Machine learning & deep learning for medical imaging  
-- Biomarker development and predictive modelling
+* Neuroimaging (structural & functional MRI)
+* ALS disease progression, stratification, and subtyping
+* Machine learning & deep learning for medical imaging
+* Biomarker development and predictive modelling
+* Clinical trial endpoint optimization
 
 ## Academic Highlights
 
-- Delivered presentations at the **International Symposium on ALS/MND**, NEALS, iCNS, OHBM, and the Neuroimaging Society in ALS  
-- Co-authored publications in *American Journal of Neuroradiology*, *Brain Communications*, *Scientific Reports*, *Journal of Neurology*, and more  
-- Collaborated with global academic leaders and industry partners such as **Biogen Inc.** and **Trace Neuroscience**
+* **President**, UBC Postdoctoral Association (2025–)
+* Delivered presentations at the **International Symposium on ALS/MND**, NEALS, iCNS (invited), ALS EnCouRAge Canada, OHBM, and the Neuroimaging Society in ALS
+* Reviewer for *Scientific Reports*, *Neuroradiology*, *NeuroImage: Clinical*, and *Brain Research Bulletin*; reviewed 24 abstracts for ISMRM 2026
+* Co-authored publications in *American Journal of Neuroradiology*, *Annals of Neurology*, *Brain Communications*, *Scientific Reports*, *Journal of Neurology*, and more
+* Collaborated with global academic leaders and industry partners including **Biogen Inc.**, **Trace Neuroscience**, and the **Canadian ALS Neuroimaging Consortium (CALSNIC)**
+* Member, **UBC Faculty of Medicine Research Committee** (2025–2026)
 
 ## Teaching & Mentorship
 
-I’ve taught and supported students in courses such as Biomedical Instrumentation, Neuroanatomy, Applied Linear Algebra, and Physics for Engineers, and supervised undergraduate research projects on brain imaging in ALS.
+I've taught and supported students in courses such as Neuroanatomy (UBC Vancouver Summer School), Biomedical Instrumentation (SFU, ENSC 475/875), Applied Linear Algebra, and Physics for Engineers, and supervised undergraduate research projects on brain imaging in ALS.
 
 ## 📬 Get in Touch
 
-- **Email**: [pedram.parnianpour@ubc.ca](mailto:pedram.parnianpour@ubc.ca)  
-- **LinkedIn**: [linkedin.com/in/pedramparnianpour](https://www.linkedin.com/in/pedramparnianpour)  
-- **Twitter**: [@PParnianpour](https://twitter.com/PParnianpour)  
-- **ORCID**: [0000-0002-2114-990X](https://orcid.org/0000-0002-2114-990X)
+* **Email**: [pedram.parnianpour@ubc.ca](mailto:pedram.parnianpour@ubc.ca)
+* **LinkedIn**: [linkedin.com/in/pedramparnianpour](https://www.linkedin.com/in/pedramparnianpour)
+* **Twitter**: [@PParnianpour](https://twitter.com/PParnianpour)
+* **ORCID**: [0000-0002-2114-990X](https://orcid.org/0000-0002-2114-990X)
