@@ -1,83 +1,136 @@
 ---
 layout: default
-title: "U0001F4D8 Publications"
+title: "📘 Publications"
 ---
 
-# U0001F4D8 Publications
+# 📘 Publications
 
-Here are some key projects and publications I've worked on, with brief explanations and links to the full articles.
-
----
-
-# Thesis
-
-#### **- PhD thesis: [MRI-Based Texture Analysis for Characterizing Cerebral Degeneration Progression in Amyotrophic Lateral Sclerosis](https://doi.org/10.7939/r3-mcxz-bq77)**
-
-*University of Alberta, 2024*
-
-**Summary:**
-Amyotrophic lateral sclerosis (ALS) is a highly heterogeneous, progressive neurodegenerative disease with a median survival of three years from the onset of symptoms. As a multi-system disease, ALS is not limited to the motor system and includes degeneration of other cerebral regions, including frontotemporal areas. The complex heterogeneity of the disease is linked to a multitude of contributing factors, such as polygenic profiles, the site of initial symptoms, the rates of disease progression, and the progressive spread of pathological processes. To achieve a deeper understanding of the disease and take a step forward toward personalized medicine, magnetic resonance imaging (MRI) provides the potential to capture the cerebral neurodegenerative process, in vivo.
-
-The overall objective of this thesis is to leverage MRI-based texture analysis, an image processing technique that quantifies intuitive features of an image, to delineate the progression of cerebral degeneration in ALS. Through a series of aims, the thesis seeks to utilize texture analysis on structural MR images to assess changes in gray and white matter structures based on a model of disease progression, detect longitudinal cerebral changes and evaluate the clinical classification of patients, analyze degeneration within specific neural tracts, and classify ALS patients based on cerebral degeneration patterns.
+Selected publications with accompanying figures from my research on neuroimaging biomarkers in ALS. For a full list, visit my [Google Scholar](https://scholar.google.com/citations?user=YOUR_ID) profile.
 
 ---
 
-# Journal Articles
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;">
+<img src="/assets/Image1.jpg" alt="Journal of Neurology 2026" style="width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);flex-shrink:0;">
+<div>
 
-#### **1. [Data-driven disease subgrouping in ALS: a multicenter cerebral functional connectivity study](https://doi.org/10.1007/s00415-026-13624-4)**
+#### [Data-driven disease subgrouping in ALS: a multicenter cerebral functional connectivity study](https://doi.org/10.1007/s00415-026-13624-4)
+*Journal of Neurology* · 2026 · Co-Author
 
-*Journal of Neurology, 2026* · Co-Author
+Dey A, Baumeister TR, Evans KC, Koppelmans V, Luk C, McLaren DG, **Parnianpour P**, Seres P, Kalra S, Canadian ALS Neuroimaging Consortium.
 
-**Summary:**
-This multicenter study used functional connectivity data from the Canadian ALS Neuroimaging Consortium (CALSNIC) to identify distinct ALS patient subgroups based on cerebral functional connectivity patterns. The work advances our understanding of disease heterogeneity and supports precision medicine approaches in ALS.
+This multicenter study used functional connectivity data from CALSNIC to identify distinct ALS patient subgroups based on cerebral functional connectivity patterns, advancing our understanding of disease heterogeneity and supporting precision medicine approaches in ALS.
 
-#### **2. An individual-level MRI approach reveals corticospinal tract degeneration and its heterogeneity in ALS**
+</div>
+</div>
 
-*Annals of Neurology, 2025* · Co-Author · *(submitted)*
+---
 
-**Summary:**
-Using an individual-level analysis of MRI data, this study reveals heterogeneity in corticospinal tract degeneration across ALS patients — an important step toward personalized imaging-based stratification in clinical trials. The approach moves beyond group-level statistics to capture patient-specific patterns of neurodegeneration.
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;">
+<img src="/assets/Image2.jpg" alt="Annals of Neurology 2025" style="width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);flex-shrink:0;">
+<div>
 
-#### **3. [Progressive and short-interval changes observed in the corticospinal tract and corpus callosum of ALS patients: A texture analysis study](https://doi.org/10.3174/ajnr.A9013)**
+#### An individual-level MRI approach reveals corticospinal tract degeneration and its heterogeneity in ALS
+*Annals of Neurology* · 2025 · Co-Author · *(submitted)*
 
-*American Journal of Neuroradiology, 2025* · First Author
+Harrison M, Liu G, **Parnianpour P**, Dey A, Baumeister TR, Abrahão A, Dupré N, Genge A, Zinman L, CALSNIC, CAPTURE ALS, Kalra S.
 
-**Summary:**
+Using an individual-level analysis of MRI data, this study reveals heterogeneity in corticospinal tract degeneration across ALS patients — an important step toward personalized imaging-based stratification in clinical trials.
 
-* Using standard T1-weighted MRI scans (commonly available in clinical settings), we applied a novel sectional texture analysis to track ALS-related changes.
-* We observed progressive degeneration in the corticospinal tract (CST) over short intervals of just 4–8 months, starting asymmetrically in the right CST and later becoming bilateral.
-* Corpus callosum changes emerged later, especially in its middle and anterior segments.
-* Importantly, these imaging changes correlated with upper motor neuron dysfunction, linking subtle MRI-based markers with clinical findings.
+</div>
+</div>
 
-This study demonstrates that texture analysis of routine MRI could serve as a practical, accessible biomarker for detecting and monitoring ALS progression over short clinical intervals in multicenter settings.
+---
 
-#### **4. [T1-weighted MRI texture analysis in amyotrophic lateral sclerosis patients stratified by the D50 progression model](https://doi.org/10.1093/braincomms/fcae389)**
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;">
+<img src="/assets/Image3.jpg" alt="AJNR 2025" style="width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);flex-shrink:0;">
+<div>
 
-*Brain Communications, 2024* · First Author
+#### [Progressive and short-interval changes observed in the corticospinal tract and corpus callosum of ALS patients: A texture analysis study](https://doi.org/10.3174/ajnr.A9013)
+*American Journal of Neuroradiology* · 2025 · **First Author**
 
-**Summary:**
-This study explores the potential of texture analysis on T1-weighted MRI images to reveal unique insights into the diverse progression patterns of ALS. We pushed the limits of texture analysis on 1.5 Tesla T1-weighted scans, stratifying patients by disease severity and stage using the D50 disease progression model. This model, which captures the sigmoidal trajectory of functional decline, allowed us to differentiate ALS progression with greater precision. Our findings indicate that texture analysis could be a promising biomarker for staging ALS.
+**Parnianpour P**, Harrison M, Benatar M, Briemberg H, Dionne A, Dupré N, Frayne R, Genge A, Graham SJ, Korngut L, Seres P, Wilman A, Zinman L, Kalra S, Canadian ALS Neuroimaging Consortium.
 
-#### **5. [Mismatch between clinically defined classification of ALS stage and the burden of cerebral pathology](https://doi.org/10.1007/s00415-024-12190-x)**
+Using standard T1-weighted MRI, we applied sectional texture analysis to track ALS-related changes over 4–8 months. We observed progressive degeneration starting asymmetrically in the right corticospinal tract, with corpus callosum changes emerging later — correlated with upper motor neuron dysfunction.
 
-*Journal of Neurology, 2024* · First Author
+</div>
+</div>
 
-**Summary:**
-In our recent article, my colleagues and I embarked on a detailed investigation of the clinical stages of amyotrophic lateral sclerosis (ALS) and the extent of cerebral pathology detected by texture analysis of T1-weighted brain images. The study demonstrated that the traditional classification of ALS patients into early and advanced stages does not accurately reflect the level of neurodegeneration, and that imaging should be incorporated into disease stratification in clinical trials.
+---
 
-#### **6. [Accurate personalized survival prediction for amyotrophic lateral sclerosis patients](https://doi.org/10.1038/s41598-023-47935-7)**
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;">
+<img src="/assets/Image4.jpg" alt="Brain Communications 2024" style="width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);flex-shrink:0;">
+<div>
 
-*Scientific Reports, 2023* · Co-Author
+#### [T1-weighted MRI texture analyses in ALS patients stratified by the D50 progression model](https://doi.org/10.1093/braincomms/fcae389)
+*Brain Communications* · 2024 · **First Author**
 
-**Summary:**
-This article introduces a machine-learned tool designed to accurately predict the survival time of ALS patients, a critical factor in strategizing future treatments and care. The tool uniquely integrates clinical features with cortical thickness data derived from brain MR images, offering a novel method to estimate the time until a composite respiratory failure event in ALS patients. The article presents the prediction as individual survival distributions (ISDs), which provide a probabilistic view of survival at various future time points for each patient.
+**Parnianpour P**, Steinbach R, Buchholz IJ, Grosskreutz J, Kalra S.
 
-#### **7. [Effects of MRI scanner manufacturers in classification tasks with deep learning models](https://doi.org/10.1038/s41598-023-43715-5)**
+This study explores texture analysis on T1-weighted 1.5T MRI scans, stratifying ALS patients by disease severity using the D50 disease progression model. Our findings demonstrate that texture analysis can differentiate ALS progression stages, offering a promising biomarker applicable across MRI scanner strengths.
 
-*Scientific Reports, 2023* · Co-Author
+</div>
+</div>
 
-**Summary:**
-This study explores the challenges of domain shift in deep learning applications for medical imaging, specifically focusing on multi-center MRI data from different scanner manufacturers (GE, Philips, and Siemens). Please check it out for further details.
+---
+
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;">
+<img src="/assets/Image5.jpg" alt="Journal of Neurology 2024" style="width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);flex-shrink:0;">
+<div>
+
+#### [Mismatch between clinically defined classification of ALS stage and the burden of cerebral pathology](https://doi.org/10.1007/s00415-024-12190-x)
+*Journal of Neurology* · 2024 · **First Author**
+
+**Parnianpour P**, Benatar M, Briemberg H, Dey A, Dionne A, Dupré N, Evans KC, Frayne R, Genge A, Graham SJ, Korngut L, McLaren DG, Seres P, Welsh RC, Wilman A, Zinman L, Kalra S.
+
+The traditional clinical staging of ALS does not accurately reflect the level of neurodegeneration. This study demonstrates the mismatch between clinical stage and cerebral pathology burden, arguing that imaging should be incorporated into disease stratification in clinical trials.
+
+</div>
+</div>
+
+---
+
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;">
+<div style="width:260px;min-height:160px;border-radius:8px;background:linear-gradient(135deg,#1a6b9a,#2ca0c0);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+<span style="color:white;font-size:2.5em;">🧠</span>
+</div>
+<div>
+
+#### [Accurate personalized survival prediction for amyotrophic lateral sclerosis patients](https://doi.org/10.1038/s41598-023-47935-7)
+*Scientific Reports* · 2023 · Co-Author
+
+Kuan LH, **Parnianpour P**, Kushol R, Kumar N, Anand T, Kalra S, Greiner R.
+
+A machine-learned tool that accurately predicts ALS patient survival time by integrating clinical features with cortical thickness data from brain MRI. Predictions are expressed as individual survival distributions (ISDs), giving probabilistic estimates at multiple future time points.
+
+</div>
+</div>
+
+---
+
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;">
+<div style="width:260px;min-height:160px;border-radius:8px;background:linear-gradient(135deg,#3a3a6b,#6b4a9a);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+<span style="color:white;font-size:2.5em;">🔬</span>
+</div>
+<div>
+
+#### [Effects of MRI scanner manufacturers in classification tasks with deep learning models](https://doi.org/10.1038/s41598-023-43715-5)
+*Scientific Reports* · 2023 · Co-Author
+
+Kushol R, **Parnianpour P**, Wilman AH, Kalra S, Yang YH.
+
+This study investigates domain shift in deep learning for multi-center MRI data across scanner manufacturers (GE, Philips, Siemens), evaluating harmonization strategies for robust classification in clinical neuroimaging pipelines.
+
+</div>
+</div>
+
+---
+
+# PhD Thesis
+
+#### [MRI-Based Texture Analysis for Characterizing Cerebral Degeneration Progression in Amyotrophic Lateral Sclerosis](https://doi.org/10.7939/r3-mcxz-bq77)
+*University of Alberta, 2024 · Supervisor: Dr. Sanjay Kalra*
+
+This thesis leverages MRI-based texture analysis to delineate cerebral degeneration progression in ALS across a series of aims: assessing gray and white matter changes by disease stage, detecting longitudinal cerebral changes, analyzing degeneration within specific neural tracts, and classifying ALS patients based on cerebral degeneration patterns.
 
 ---
 
@@ -85,25 +138,23 @@ This study explores the challenges of domain shift in deep learning applications
 
 ### Podium Presentations
 
-* **"Enhancing ALS Clinical Trial Efficiency Using Longitudinal Measures of Brain Function"** — *ALS EnCouRAge Canada*, Vancouver, BC, April 2026
+* **"Enhancing ALS Clinical Trial Efficiency Using Longitudinal Measures of Brain Function"** — *ALS EnCouRAge Canada*, Toronto, Canada, April 2026
 * **"Trial-ready power estimates for longitudinal resting-state fMRI biomarkers in ALS"** *(Invited)* — *The 4th International Computational Neuroimaging Society Meeting*, Trinity College Dublin, Nov 2025
 * **"Resting-state fMRI as a translational biomarker for ALS therapeutics"** — *The 2025 Annual NEALS Meeting*, Clearwater, FL, Oct 2025
 * **"T1-weighted MRI texture analysis in ALS patients stratified by the D50 disease progression model"** — *The 13th Neuroimaging Society in ALS (NiSALS) Meeting*, Montreal, Canada, Dec 2024
-* **The 25th Annual Neuroscience Research Day**, University of Alberta, March 2024
-* **"Along-tract texture analysis of magnetic resonance images in the corticospinal tract and corpus callosum in ALS"** — *The 34th International Symposium on ALS/MND*, Basel, Switzerland, Dec 2023
-* **The 24th Annual Neuroscience Research Day**, University of Alberta, March 2023
-* **ALS Canada Research Forum Meeting — Bonus Session**, online, June 2021
-* **Alberta Imaging Symposium (AIS)**, University of Calgary, May 2019
+* **"Along-tract texture analysis of MRI in the corticospinal tract and corpus callosum in ALS"** — *The 34th International Symposium on ALS/MND*, Basel, Switzerland, Dec 2023
+* **"Sectional texture analysis of white matter tracts in ALS"** — *ALS Canada Research Forum*, Toronto, Canada, June 2023
+* **"Texture analysis to capture ALS pathology in different levels of upper motor neuron involvement"** — *OHBM Annual Meeting*, Glasgow, UK, 2022
+* **"Texture analysis reveals cerebral degeneration in ALS: a multicenter study"** — *OHBM Annual Meeting*, Virtual, 2021
+* **"Texture analysis detects cerebral degeneration in ALS"** — *ALS Canada Research Forum*, Toronto, Canada, 2021
 
 ### Poster Presentations
 
 * **"Trial-Ready Power Estimates for Longitudinal Resting-state fMRI Biomarkers in ALS"** (Poster #906) — *ISMRM Annual Meeting*, Cape Town, South Africa, May 2026 *(presented by Dr. Erik P. Pioro)*
-* **ALS Canada Research Forum Meeting**, June 2023
-* **The 27th Annual Meeting of the Organization for Human Brain Mapping (OHBM)**, 2021
-* **ALS Canada Research Forum Meeting**, June 2021
-* **The 25th Annual Meeting of the Organization for Human Brain Mapping (OHBM)**, June 2019
-* **ALS Canada Research Forum Meeting**, April 2019
-* **Alberta Imaging Symposium (AIS)**, May 2019
-* **The 7th International Conference on Cognitive Science (ICCS)**, 2017 (two presentations)
-
----
+* *ALS Canada Research Forum*, June 2023
+* *OHBM Annual Meeting*, 2021
+* *ALS Canada Research Forum*, June 2021
+* *OHBM Annual Meeting*, June 2019
+* *ALS Canada Research Forum*, April 2019
+* *Alberta Imaging Symposium (AIS)*, May 2019
+* *The 7th International Conference on Cognitive Science (ICCS)*, 2017 (two presentations)
