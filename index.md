@@ -7,7 +7,7 @@ title: Home
 
 ## Hi!
 
-I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning**, **neuroimaging**, and **computational modelling** in studies of **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
+I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning**, **resting-state fMRI**, and **computational modelling** in MRI/PET studies of **Amyotrophic Lateral Sclerosis (ALS) and related disorders**. I am also collaborating with **Trace Neuroscience** on neuroimaging biomarker development for a Phase 1/2 clinical trial of TRCN-1023, an ASO therapy targeting the UNC13A protein in ALS.
 
 I hold a **PhD in Neuroscience** from the University of Alberta, where I worked with Professor Sanjay Kalra on the application of **MRI-based techniques** and **texture analysis** to explore **cerebral degeneration and disease heterogeneity in ALS**.
 
@@ -23,9 +23,10 @@ I hold a **PhD in Neuroscience** from the University of Alberta, where I worked 
 
 ## Academic Highlights
 
-* **President**, UBC Postdoctoral Association (2025–2026)
+* 🏆 **ALS Association Milton Safenowitz Postdoctoral Fellowship** ($150,000 USD, 2026–2028)
+* **President**, UBC Postdoctoral Association (2025–)
 * Delivered presentations at the **International Symposium on ALS/MND**, NEALS, iCNS (invited), ALS EnCouRAge Canada, OHBM, and the Neuroimaging Society in ALS
-* Reviewer for *Scientific Reports*, *Neuroradiology*, *NeuroImage: Clinical*, and *Brain Research Bulletin*; reviewed 24 abstracts for ISMRM 2026
+* Reviewer for *Scientific Reports*, *Neuroradiology*, *NeuroImage: Clinical*, *Brain Research Bulletin*, and *BMC Medical Imaging*; reviewed 24 abstracts for ISMRM 2026
 * Co-authored publications in *American Journal of Neuroradiology*, *Annals of Neurology*, *Brain Communications*, *Scientific Reports*, *Journal of Neurology*, and more
 * Collaborated with global academic leaders and industry partners including **Biogen Inc.**, **Trace Neuroscience**, and the **Canadian ALS Neuroimaging Consortium (CALSNIC)**
 * Member, **UBC Faculty of Medicine Research Committee** (2025–2026)
