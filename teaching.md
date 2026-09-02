@@ -38,11 +38,26 @@ February 2014–August 2014 · Undergraduate
 
 ---
 
-# Mentorship
+# Mentorship & Supervision
 
-I advised and mentored undergraduate summer students and one neurology resident (2020–2024) in Dr. Sanjay Kalra's lab, providing guidance on MRI fundamentals, data processing, statistical analysis, application of machine learning, and presentation of results.
+**Co-Supervisor — UBC WorkLearn Undergraduate Student**
+September 2025–April 2026 · University of British Columbia
+
+**Research Mentor — Dr. Sanjay Kalra's Lab, University of Alberta**
+May 2020–2024 · 4 mentees
+
+I advised and mentored undergraduate summer students and one neurology resident (2020–2024), providing guidance on MRI fundamentals, data processing, statistical analysis, application of machine learning, and presentation of results.
 
 * **2023** – Socrates Temraz; *Project: Cerebral degeneration in ALS using T2-weighted MRI*
 * **2022** – Adam Elamy; *Project: Functional connectivity of basal ganglia in ALS*
 * **2021** – Ekhlas Assaedi (Neurology resident); *Project: Multimodal MRI texture analysis in ALS*
 * **2020** – Andrew Wu (now a Neurology resident); *Project: Longitudinal FLAIR MRI texture analysis in ALS*
+
+---
+
+# Event Organization
+
+**UBC Postdoctoral Research Day** *(Lead Organizer)*
+September–December 2025 · UBC Postdoctoral Association
+
+Led the organization of the annual UBC Postdoctoral Research Day as President of the UBC PDA, coordinating with executive team members to deliver a successful event showcasing postdoctoral research across the university.
