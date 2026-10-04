@@ -27,7 +27,7 @@ I hold a **PhD in Neuroscience** from the University of Alberta, where I worked 
 ## Academic Highlights
 
 * **[Award]** ALS Association Milton Safenowitz Postdoctoral Fellowship ($150,000 USD, 2026-2028)
-* **President**, UBC Postdoctoral Association (2025--)
+* **President**, UBC Postdoctoral Association (2025--2026)
 * Delivered presentations at the **International Symposium on ALS/MND**, NEALS, iCNS (invited), ALS EnCouRAge Canada, OHBM, and the Neuroimaging Society in ALS
 * Reviewer for *Scientific Reports*, *Neuroradiology*, *NeuroImage: Clinical*, *Brain Research Bulletin*, and *BMC Medical Imaging*; reviewed 24 abstracts for ISMRM 2026
 * Co-authored publications in *American Journal of Neuroradiology*, *Annals of Neurology*, *Brain Communications*, *Scientific Reports*, *Journal of Neurology*, and more
