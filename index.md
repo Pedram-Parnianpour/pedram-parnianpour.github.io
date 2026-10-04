@@ -8,7 +8,7 @@ title: Home
 <iframe src="/turing.html?preset=coral&controls=0&caption=0" title="Animated Turing pattern" style="width:100%; height:160px; border:0; border-radius:6px;" loading="lazy"></iframe>
 <p style="font-size:0.85em; color:#777; margin:6px 0 0;"><em>Turing patterns: the Gray-Scott reaction-diffusion model, based on Alan Turing's idea of how spots and stripes form in nature. Click or drag to grow new patterns.</em></p>
 
-<iframe src="/pendulum.html?controls=0&caption=0" title="Animated double pendulum chaos" style="width:100%; height:260px; border:0; border-radius:6px;" loading="lazy"></iframe>
+<iframe src="/pendulum.html?controls=0&caption=0" title="Animated double pendulum chaos" style="width:100%; height:260px; margin-top:22px; border:0; border-radius:6px;" loading="lazy"></iframe>
 <p style="font-size:0.85em; color:#777; margin:6px 0 0;"><em>Chaos: 100 double pendulums released a millionth of a degree apart. They move as one, then scatter. Click to release them from a new angle.</em></p>
 
 ## Hi!
