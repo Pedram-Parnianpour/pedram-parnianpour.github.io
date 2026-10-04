@@ -5,6 +5,8 @@ title: Home
 
 <img src="/assets/IMG_5932.jpeg" alt="Pedram Parnianpour" style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
 
+<iframe src="/turing.html?preset=coral&controls=0&caption=0" title="Animated Turing pattern" style="width:100%; height:160px; border:0; border-radius:6px;" loading="lazy"></iframe>
+
 ## Hi!
 
 I'm **Pedram Parnianpour**, a Postdoctoral Research Fellow at the Djavad Mowafaghian Centre for Brain Health, University of British Columbia. I am currently working with Professor Erik P. Pioro on the application of **machine learning**, **resting-state fMRI**, and **computational modelling** in MRI/PET studies of **Amyotrophic Lateral Sclerosis (ALS) and related disorders**.
