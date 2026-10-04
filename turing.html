@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Turing patterns</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  /* Palette borrowed from H&E histology: hematoxylin violet on eosin pink */
+  :root {
+    --paper: #f7f2f4;
+    --ink: #2e2547;
+    --muted: #6c6280;
+    --line: rgba(46, 37, 71, .2);
+    --c0: #f7f2f4; --c1: #ecccd9; --c2: #c286a5; --c3: #6a4787; --c4: #2a1f4a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #17121f; --ink: #ece2ea; --muted: #a497b4; --line: rgba(236, 226, 234, .22);
+      --c0: #17121f; --c1: #34264b; --c2: #7c5089; --c3: #d391b0; --c4: #f8dfe9;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #17121f; --ink: #ece2ea; --muted: #a497b4; --line: rgba(236, 226, 234, .22);
+    --c0: #17121f; --c1: #34264b; --c2: #7c5089; --c3: #d391b0; --c4: #f8dfe9;
+  }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+  }
+  .stage {
+    position: relative;
+    flex: 1;
+    min-height: 140px;
+    overflow: hidden;
+    touch-action: none;
+    cursor: crosshair;
+  }
+  canvas { display: block; width: 100%; height: 100%; }
+  .bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .4rem 1rem;
+    padding: .55rem .2rem .2rem;
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+  .caption { margin: 0; font-style: italic; color: var(--muted); max-width: 62ch; }
+  .controls { display: flex; flex-wrap: wrap; gap: .2rem; }
+  button {
+    font: inherit;
+    font-size: .86rem;
+    color: var(--ink);
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: .12rem .62rem;
+    cursor: pointer;
+  }
+  button:hover { border-color: var(--line); }
+  button[aria-pressed="true"] { border-color: var(--ink); }
+  button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .sep { width: 1px; background: var(--line); margin: .2rem .3rem; }
+  .no-controls .controls, .no-caption .caption { display: none; }
+  .no-controls.no-caption .bar { display: none; }
+</style>
+</head>
+<body>
+  <div class="stage" id="stage" role="img" aria-label="Animated reaction-diffusion pattern. Tap or drag to seed new growth.">
+    <canvas id="view"></canvas>
+  </div>
+  <div class="bar">
+    <p class="caption">Turing patterns from the Gray&ndash;Scott reaction&ndash;diffusion model. Tap or drag to seed new growth.</p>
+    <div class="controls" id="controls">
+      <button data-preset="coral">Coral</button>
+      <button data-preset="mitosis">Mitosis</button>
+      <button data-preset="maze">Maze</button>
+      <button data-preset="worms">Worms</button>
+      <span class="sep" aria-hidden="true"></span>
+      <button id="play">Pause</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+<script>
+(() => {
+  // ---------- options from the URL: ?preset=coral&controls=0&caption=0&theme=dark ----------
+  const qs = new URLSearchParams(location.search);
+  if (qs.get('controls') === '0') document.body.classList.add('no-controls');
+  if (qs.get('caption') === '0') document.body.classList.add('no-caption');
+  if (qs.get('theme') === 'dark' || qs.get('theme') === 'light') document.documentElement.dataset.theme = qs.get('theme');
+
+  const PRESETS = {
+    coral:   { f: 0.0545, k: 0.0620 },
+    mitosis: { f: 0.0367, k: 0.0649 },
+    maze:    { f: 0.0290, k: 0.0570 },
+    worms:   { f: 0.0780, k: 0.0610 }
+  };
+  let presetName = PRESETS[qs.get('preset')] ? qs.get('preset') : 'coral';
+  let F = PRESETS[presetName].f, K = PRESETS[presetName].k;
+  const DU = 1.0, DV = 0.5;
+
+  const stage = document.getElementById('stage');
+  const view = document.getElementById('view');
+  const ctx = view.getContext('2d');
+  const off = document.createElement('canvas');
+  const offCtx = off.getContext('2d');
+  const playBtn = document.getElementById('play');
+
+  // ---------- simulation state ----------
+  let W = 0, H = 0, U, V, U2, V2, xm, xp, ym, yp, img;
+
+  function alloc(w, h) {
+    W = w; H = h;
+    U = new Float32Array(W * H); V = new Float32Array(W * H);
+    U2 = new Float32Array(W * H); V2 = new Float32Array(W * H);
+    xm = new Int32Array(W); xp = new Int32Array(W);
+    ym = new Int32Array(H); yp = new Int32Array(H);
+    for (let x = 0; x < W; x++) { xm[x] = (x - 1 + W) % W; xp[x] = (x + 1) % W; }
+    for (let y = 0; y < H; y++) { ym[y] = (y - 1 + H) % H; yp[y] = (y + 1) % H; }
+    off.width = W; off.height = H;
+    img = offCtx.createImageData(W, H);
+  }
+
+  function seedAt(cx, cy, r) {
+    const r2 = r * r;
+    for (let dy = -r; dy <= r; dy++) {
+      for (let dx = -r; dx <= r; dx++) {
+        if (dx * dx + dy * dy > r2) continue;
+        const x = ((Math.round(cx) + dx) % W + W) % W;
+        const y = ((Math.round(cy) + dy) % H + H) % H;
+        const i = y * W + x;
+        U[i] = 0.5; V[i] = 0.25 + Math.random() * 0.05;
+      }
+    }
+  }
+
+  function reset() {
+    U.fill(1); V.fill(0);
+    const n = Math.max(6, Math.round(W * H / 1400));
+    for (let s = 0; s < n; s++) seedAt(Math.random() * W, Math.random() * H, 2 + Math.floor(Math.random() * 3));
+  }
+
+  function step(n) {
+    const f = F, k = K, fk = F + K;
+    for (let s = 0; s < n; s++) {
+      for (let y = 0; y < H; y++) {
+        const r = y * W, rm = ym[y] * W, rp = yp[y] * W;
+        for (let x = 0; x < W; x++) {
+          const a = xm[x], b = xp[x], i = r + x;
+          const u = U[i], v = V[i];
+          const lu = -u + 0.2 * (U[r + a] + U[r + b] + U[rm + x] + U[rp + x])
+                        + 0.05 * (U[rm + a] + U[rm + b] + U[rp + a] + U[rp + b]);
+          const lv = -v + 0.2 * (V[r + a] + V[r + b] + V[rm + x] + V[rp + x])
+                        + 0.05 * (V[rm + a] + V[rm + b] + V[rp + a] + V[rp + b]);
+          const uvv = u * v * v;
+          U2[i] = u + DU * lu - uvv + f * (1 - u);
+          V2[i] = v + DV * lv + uvv - fk * v;
+        }
+      }
+      let t = U; U = U2; U2 = t; t = V; V = V2; V2 = t;
+    }
+  }
+
+  // ---------- colour ----------
+  let lut = new Uint8ClampedArray(256 * 3);
+  function hex(h) { h = h.trim().replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)); }
+  function buildLut() {
+    const cs = getComputedStyle(document.documentElement);
+    const stops = ['--c0', '--c1', '--c2', '--c3', '--c4'].map(n => hex(cs.getPropertyValue(n) || '#000000'));
+    const seg = stops.length - 1;
+    for (let i = 0; i < 256; i++) {
+      const t = i / 255 * seg, j = Math.min(seg - 1, Math.floor(t)), fr = t - j;
+      for (let c = 0; c < 3; c++) lut[i * 3 + c] = stops[j][c] + (stops[j + 1][c] - stops[j][c]) * fr;
+    }
+  }
+
+  function render() {
+    const d = img.data;
+    for (let i = 0, p = 0; i < W * H; i++, p += 4) {
+      let t = V[i] * 2.4;              // V peaks around 0.4-0.5
+      t = t < 0 ? 0 : t > 1 ? 1 : t;
+      const L = (t * 255) | 0;
+      d[p] = lut[L * 3]; d[p + 1] = lut[L * 3 + 1]; d[p + 2] = lut[L * 3 + 2]; d[p + 3] = 255;
+    }
+    offCtx.putImageData(img, 0, 0);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(off, 0, 0, view.width, view.height);
+  }
+
+  // ---------- sizing ----------
+  function gridFor(cssW, cssH) {
+    const cell = cssW < 600 ? 2.6 : 3.2;          // CSS px per cell
+    let w = Math.max(40, Math.round(cssW / cell)), h = Math.max(30, Math.round(cssH / cell));
+    const maxCells = 56000;                       // keeps phones smooth
+    if (w * h > maxCells) { const s = Math.sqrt(maxCells / (w * h)); w = Math.round(w * s); h = Math.round(h * s); }
+    return [w, h];
+  }
+
+  function resize() {
+    const r = stage.getBoundingClientRect();
+    if (r.width < 2 || r.height < 2) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    view.width = Math.round(r.width * dpr); view.height = Math.round(r.height * dpr);
+    const [w, h] = gridFor(r.width, r.height);
+    if (!U) { alloc(w, h); reset(); warmUp(); return; }
+    if (w === W && h === H) { render(); return; }
+    // resample the current pattern so a resize doesn't wipe it
+    const oU = U, oV = V, oW = W, oH = H;
+    alloc(w, h);
+    for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+      const si = Math.floor(y * oH / H) * oW + Math.floor(x * oW / W);
+      U[y * W + x] = oU[si]; V[y * W + x] = oV[si];
+    }
+    render();
+  }
+
+  // ---------- run loop ----------
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let userPlaying = !reduceMotion.matches;
+  let onScreen = true, rafId = 0, stepsPerFrame = 10, warming = false;
+
+  function shouldRun() { return !!U && userPlaying && onScreen && !document.hidden && !warming; }
+
+  function frame() {
+    rafId = 0;
+    if (!shouldRun()) return;
+    const t0 = performance.now();
+    step(stepsPerFrame);
+    render();
+    const dt = performance.now() - t0;          // adapt to the device
+    if (dt > 12 && stepsPerFrame > 2) stepsPerFrame--;
+    else if (dt < 6 && stepsPerFrame < 24) stepsPerFrame++;
+    rafId = requestAnimationFrame(frame);
+  }
+  function kick() { if (!rafId && shouldRun()) rafId = requestAnimationFrame(frame); }
+
+  // Develop the pattern a bit before showing it, in chunks so the page never freezes.
+  // With reduced motion, develop it fully and show a still image.
+  function warmUp() {
+    warming = true;
+    let left = reduceMotion.matches ? 3000 : 250;
+    (function chunk() {
+      const n = Math.min(100, left);
+      step(n); left -= n;
+      if (left > 0) setTimeout(chunk, 0);
+      else { warming = false; render(); kick(); }
+    })();
+  }
+
+  function setPlaying(p) {
+    userPlaying = p;
+    playBtn.textContent = p ? 'Pause' : 'Play';
+    kick();
+  }
+
+  // ---------- interaction ----------
+  let drawing = false;
+  function seedFromEvent(e) {
+    const r = stage.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width * W, y = (e.clientY - r.top) / r.height * H;
+    seedAt(x, y, Math.max(3, Math.round(W / 70)));
+    if (!shouldRun()) render();
+  }
+  stage.addEventListener('pointerdown', e => { drawing = true; stage.setPointerCapture(e.pointerId); seedFromEvent(e); });
+  stage.addEventListener('pointermove', e => { if (drawing) seedFromEvent(e); });
+  ['pointerup', 'pointercancel'].forEach(t => stage.addEventListener(t, () => { drawing = false; }));
+
+  document.querySelectorAll('[data-preset]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      presetName = btn.dataset.preset;
+      F = PRESETS[presetName].f; K = PRESETS[presetName].k;
+      markPreset();
+      if (!shouldRun()) { step(400); render(); }  // show the change even when paused
+    });
+  });
+  function markPreset() {
+    document.querySelectorAll('[data-preset]').forEach(b => b.setAttribute('aria-pressed', b.dataset.preset === presetName));
+  }
+  playBtn.addEventListener('click', () => setPlaying(!userPlaying));
+  document.getElementById('reset').addEventListener('click', () => { reset(); step(150); render(); });
+
+  // ---------- pause when not visible ----------
+  new IntersectionObserver(es => { onScreen = es[0].isIntersecting; kick(); }).observe(stage);
+  document.addEventListener('visibilitychange', kick);
+
+  // ---------- theme changes ----------
+  const darkMQ = window.matchMedia('(prefers-color-scheme: dark)');
+  const onTheme = () => { buildLut(); if (U) render(); };
+  darkMQ.addEventListener ? darkMQ.addEventListener('change', onTheme) : darkMQ.addListener(onTheme);
+  new MutationObserver(onTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  // ---------- start ----------
+  buildLut();
+  markPreset();
+  setPlaying(userPlaying);
+  new ResizeObserver(resize).observe(stage);
+})();
+</script>
+</body>
+</html>
