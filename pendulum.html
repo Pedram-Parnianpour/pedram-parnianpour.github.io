@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Double pendulum chaos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  /* Same H&E palette as turing.html */
+  :root {
+    --paper: #f7f2f4; --ink: #2e2547; --muted: #6c6280; --line: rgba(46, 37, 71, .2);
+    --from: #d08fb0; --to: #2a1f4a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #17121f; --ink: #ece2ea; --muted: #a497b4; --line: rgba(236, 226, 234, .22);
+      --from: #8a55a0; --to: #f8dfe9;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #17121f; --ink: #ece2ea; --muted: #a497b4; --line: rgba(236, 226, 234, .22);
+    --from: #8a55a0; --to: #f8dfe9;
+  }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    display: flex; flex-direction: column;
+  }
+  .stage { position: relative; flex: 1; min-height: 160px; overflow: hidden; touch-action: none; cursor: pointer; }
+  canvas { display: block; width: 100%; height: 100%; }
+  .bar {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: .4rem 1rem; padding: .55rem .2rem .2rem; font-size: .92rem; line-height: 1.45;
+  }
+  .caption { margin: 0; font-style: italic; color: var(--muted); max-width: 62ch; }
+  .controls { display: flex; flex-wrap: wrap; gap: .2rem; }
+  button {
+    font: inherit; font-size: .86rem; color: var(--ink); background: none;
+    border: 1px solid transparent; border-radius: 999px; padding: .12rem .62rem; cursor: pointer;
+  }
+  button:hover { border-color: var(--line); }
+  button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .no-controls .controls, .no-caption .caption { display: none; }
+  .no-controls.no-caption .bar { display: none; }
+</style>
+</head>
+<body>
+  <div class="stage" id="stage" role="img" aria-label="Animated double pendulums diverging chaotically. Click to release them from a new angle.">
+    <canvas id="view"></canvas>
+  </div>
+  <div class="bar">
+    <p class="caption">100 double pendulums released a millionth of a degree apart. Click to release them from a new angle.</p>
+    <div class="controls">
+      <button id="play">Pause</button>
+      <button id="restart">Restart</button>
+    </div>
+  </div>
+
+<script>
+(() => {
+  // ---------- options: ?n=100&controls=0&caption=0&theme=dark ----------
+  const qs = new URLSearchParams(location.search);
+  if (qs.get('controls') === '0') document.body.classList.add('no-controls');
+  if (qs.get('caption') === '0') document.body.classList.add('no-caption');
+  if (qs.get('theme') === 'dark' || qs.get('theme') === 'light') document.documentElement.dataset.theme = qs.get('theme');
+
+  const N = Math.max(2, Math.min(400, parseInt(qs.get('n'), 10) || 100));
+  const SPREAD = 1e-6 * Math.PI / 180;     // a millionth of a degree between neighbours
+  const G = 9.81, L = 1, DT = 1 / 240, SUB = 4, CYCLE = 45;  // seconds before an automatic new release
+
+  const stage = document.getElementById('stage');
+  const view = document.getElementById('view');
+  const ctx = view.getContext('2d');
+  const trail = document.createElement('canvas');
+  const tctx = trail.getContext('2d');
+  const playBtn = document.getElementById('play');
+
+  // state per pendulum: theta1, theta2, omega1, omega2
+  const S = new Float64Array(N * 4);
+  const prev = new Float64Array(N * 2);
+  let simTime = 0, hasPrev = false;
+
+  function release(theta) {
+    for (let i = 0; i < N; i++) {
+      const o = i * 4, a = theta + (i - N / 2) * SPREAD;
+      S[o] = a; S[o + 1] = a; S[o + 2] = 0; S[o + 3] = 0;
+    }
+    simTime = 0; hasPrev = false;
+    tctx.clearRect(0, 0, trail.width, trail.height);
+  }
+  function randomRelease() { release((110 + Math.random() * 60) * Math.PI / 180 * (Math.random() < .5 ? -1 : 1)); }
+
+  // equal masses and arm lengths
+  function deriv(t1, t2, w1, w2, out) {
+    const d = t1 - t2, sd = Math.sin(d), cd = Math.cos(d);
+    const den = 3 - Math.cos(2 * d);
+    out[0] = w1;
+    out[1] = w2;
+    out[2] = (-3 * G * Math.sin(t1) - G * Math.sin(t1 - 2 * t2) - 2 * sd * (w2 * w2 * L + w1 * w1 * L * cd)) / (L * den);
+    out[3] = (2 * sd * (2 * w1 * w1 * L + 2 * G * Math.cos(t1) + w2 * w2 * L * cd)) / (L * den);
+  }
+  const k1 = new Float64Array(4), k2 = new Float64Array(4), k3 = new Float64Array(4), k4 = new Float64Array(4);
+  function rk4(o, h) {
+    const a = S[o], b = S[o + 1], c = S[o + 2], d = S[o + 3];
+    deriv(a, b, c, d, k1);
+    deriv(a + h / 2 * k1[0], b + h / 2 * k1[1], c + h / 2 * k1[2], d + h / 2 * k1[3], k2);
+    deriv(a + h / 2 * k2[0], b + h / 2 * k2[1], c + h / 2 * k2[2], d + h / 2 * k2[3], k3);
+    deriv(a + h * k3[0], b + h * k3[1], c + h * k3[2], d + h * k3[3], k4);
+    for (let j = 0; j < 4; j++) S[o + j] += h / 6 * (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]);
+  }
+  function advance(seconds) {
+    const steps = Math.round(seconds / DT);
+    for (let s = 0; s < steps; s++) for (let i = 0; i < N; i++) rk4(i * 4, DT);
+    simTime += steps * DT;
+  }
+
+  // ---------- colour ----------
+  let colors = [], paper = '#000';
+  function hex(h) { h = h.trim().replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)); }
+  function buildColors() {
+    const cs = getComputedStyle(document.documentElement);
+    const a = hex(cs.getPropertyValue('--from')), b = hex(cs.getPropertyValue('--to'));
+    paper = cs.getPropertyValue('--paper').trim();
+    colors = [];
+    for (let i = 0; i < N; i++) {
+      const t = N === 1 ? 0 : i / (N - 1);
+      colors.push(a.map((v, c) => Math.round(v + (b[c] - v) * t)));
+    }
+    tctx.clearRect(0, 0, trail.width, trail.height);
+  }
+
+  // ---------- geometry ----------
+  let cx = 0, cy = 0, arm = 0, dpr = 1;
+  function resize() {
+    const r = stage.getBoundingClientRect();
+    if (r.width < 2 || r.height < 2) return;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    view.width = trail.width = Math.round(r.width * dpr);
+    view.height = trail.height = Math.round(r.height * dpr);
+    cx = view.width / 2; cy = view.height / 2;
+    arm = Math.min(view.width, view.height) / 2 * 0.46;
+    hasPrev = false;
+    draw();
+  }
+  function tip(i) {
+    const o = i * 4;
+    const x1 = cx + arm * Math.sin(S[o]), y1 = cy + arm * Math.cos(S[o]);
+    return [x1, y1, x1 + arm * Math.sin(S[o + 1]), y1 + arm * Math.cos(S[o + 1])];
+  }
+
+  function draw() {
+    if (!view.width) return;
+    // fade old trails
+    tctx.globalCompositeOperation = 'destination-out';
+    tctx.fillStyle = 'rgba(0,0,0,0.045)';
+    tctx.fillRect(0, 0, trail.width, trail.height);
+    tctx.globalCompositeOperation = 'source-over';
+    tctx.lineWidth = 1.2 * dpr; tctx.lineCap = 'round';
+    for (let i = 0; i < N; i++) {
+      const p = tip(i);
+      if (hasPrev) {
+        const c = colors[i];
+        tctx.strokeStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0.55)';
+        tctx.beginPath(); tctx.moveTo(prev[i * 2], prev[i * 2 + 1]); tctx.lineTo(p[2], p[3]); tctx.stroke();
+      }
+      prev[i * 2] = p[2]; prev[i * 2 + 1] = p[3];
+    }
+    hasPrev = true;
+
+    ctx.fillStyle = paper;
+    ctx.fillRect(0, 0, view.width, view.height);
+    ctx.drawImage(trail, 0, 0);
+    ctx.lineWidth = 1 * dpr;
+    for (let i = 0; i < N; i++) {
+      const p = tip(i), c = colors[i];
+      ctx.strokeStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0.35)';
+      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(p[0], p[1]); ctx.lineTo(p[2], p[3]); ctx.stroke();
+      ctx.fillStyle = 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')';
+      ctx.beginPath(); ctx.arc(p[2], p[3], 2.2 * dpr, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = colors[N - 1] ? 'rgb(' + colors[N - 1].join(',') + ')' : '#000';
+    ctx.beginPath(); ctx.arc(cx, cy, 2.5 * dpr, 0, Math.PI * 2); ctx.fill();
+  }
+
+  // ---------- run loop ----------
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let userPlaying = !reduceMotion.matches, onScreen = true, rafId = 0, last = 0;
+  function shouldRun() { return userPlaying && onScreen && !document.hidden && view.width > 0; }
+  function frame(now) {
+    rafId = 0;
+    if (!shouldRun()) return;
+    const dt = Math.min(0.05, last ? (now - last) / 1000 : 1 / 60);
+    last = now;
+    advance(dt);
+    if (simTime > CYCLE) randomRelease();
+    draw();
+    rafId = requestAnimationFrame(frame);
+  }
+  function kick() { if (!rafId && shouldRun()) { last = 0; rafId = requestAnimationFrame(frame); } }
+  function setPlaying(p) { userPlaying = p; playBtn.textContent = p ? 'Pause' : 'Play'; kick(); }
+
+  // Reduced motion: show a still of the moment the pendulums have fanned out.
+  function still() {
+    for (let t = 0; t < 14; t += 1 / 30) { advance(1 / 30); if (t > 11) draw(); }
+    draw();
+  }
+
+  // ---------- interaction ----------
+  stage.addEventListener('pointerdown', e => {
+    const r = stage.getBoundingClientRect();
+    const x = (e.clientX - r.left) * dpr - cx, y = (e.clientY - r.top) * dpr - cy;
+    if (Math.hypot(x, y) < 4) return;
+    release(Math.atan2(x, y));
+    if (!shouldRun()) { if (reduceMotion.matches) still(); else draw(); }
+  });
+  playBtn.addEventListener('click', () => setPlaying(!userPlaying));
+  document.getElementById('restart').addEventListener('click', () => { randomRelease(); if (!shouldRun()) draw(); });
+
+  new IntersectionObserver(es => { onScreen = es[0].isIntersecting; kick(); }).observe(stage);
+  document.addEventListener('visibilitychange', kick);
+
+  const darkMQ = window.matchMedia('(prefers-color-scheme: dark)');
+  const onTheme = () => { buildColors(); draw(); };
+  darkMQ.addEventListener ? darkMQ.addEventListener('change', onTheme) : darkMQ.addListener(onTheme);
+  new MutationObserver(onTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  // ---------- start ----------
+  buildColors();
+  randomRelease();
+  new ResizeObserver(() => { resize(); if (reduceMotion.matches && !userPlaying) still(); }).observe(stage);
+  setPlaying(userPlaying);
+})();
+</script>
+</body>
+</html>
