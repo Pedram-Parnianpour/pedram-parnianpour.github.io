@@ -6,6 +6,7 @@ title: Home
 <img src="/assets/IMG_5932.jpeg" alt="Pedram Parnianpour" style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
 
 <iframe src="/turing.html?preset=coral&controls=0&caption=0" title="Animated Turing pattern" style="width:100%; height:160px; border:0; border-radius:6px;" loading="lazy"></iframe>
+<p style="font-size:0.85em; color:#777; margin:6px 0 0;"><em>Turing patterns: the Gray-Scott reaction-diffusion model, based on Alan Turing's idea of how spots and stripes form in nature. Click or drag to grow new patterns.</em></p>
 
 ## Hi!
 
